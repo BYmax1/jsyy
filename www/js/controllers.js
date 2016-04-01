@@ -37,6 +37,8 @@ angular.module('starter.controllers', [])
     $scope.chat = get($stateParams.chatId);
   })
 })
+
+//登录还需要修改
 .controller('LoginCtrl', function($scope,$location,$http,$ionicPopup) {
 
   
@@ -68,17 +70,37 @@ angular.module('starter.controllers', [])
        console.log('Thank you for not eating my delicious ice cream cone');
      });             
 
-
-
-
-
             }
-               
       });
-    
   };
-
 })
+
+.controller('ClassDetailCtrl', function($scope) {
+
+   $scope.flag=false;
+   $scope.show=function()
+   {
+      $scope.flag=!$scope.flag;
+   }
+})
+
+/*.controller('ClassListCtrl', function($scope,$location) {
+  $location.url('/tab/dash/class-list');
+    $scope.fun=function()
+  {
+    $location.url('/tab/dash/class-table');
+  }
+})
+
+.controller('ClassTableCtrl', function($scope,$location) {
+  $scope.fun=function()
+  {
+    $location.url('/tab/dash/class-list');
+  }
+  
+})
+*/
+
 
 .controller('AccountCtrl', function($scope) {
   $scope.settings = {

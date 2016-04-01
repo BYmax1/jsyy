@@ -1,0 +1,53 @@
+<ion-view view-title="教室503">
+<ion-content>
+     
+   <div class="card">
+  <div class="item item-divider">
+    <img src="http://www.pp3.cn/uploads/allimg/111110/114J0L31-5.jpg" width="360px" height="200px">
+
+  </div>
+  <div class="item item-text-wrap">
+      <h2>名称:H503</h2>
+      <h2>编号:503</h2>
+      <h2>容量:40</h2>
+      <h2 class="positive" ng-click="show()">所装软件<i class="ion-chevron-down" data-pack="default" data-tags="arrow, down"></i></h2> 
+      <div ng-show="flag">
+      <p>photoshow,金蝶,快播</p>
+      </div>           
+  </div>
+  <div class="item item-divider">
+    <div class="list list-inset">
+        <label class="item item-input">
+          <input type="text" placeholder="课程名字">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="上课人数">
+        </label>
+        <label class="item item-input">
+        上课时间
+			    <select>
+			      <option selected>周一</option>
+			      <option>周二</option>
+			      <option>周三</option>
+			      <option>周四</option>
+			      <option>周五</option>
+			    </select>
+			    <select style="margin-left:10px">
+			      <option selected>1-2</option>
+			      <option>1-2-3</option>
+			      <option>1-2-3-4</option>
+			      <option>5-6</option>
+			      <option>5-6-7</option>
+			      <option>8-9</option>
+			      <option>8-9-A</option>
+			    </select> 
+        </label>
+      </div>
+      <div class="padding">
+        <button class="button button-block button-positive">我要预约</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </ion-content>
+</ion-view>

@@ -21,3 +21,17 @@
 	color: gray;
 	text-decoration: none;
 }
+
+#right-button
+{
+	text-align: right;
+}
+#select
+{
+	margin-bottom: 10px;
+}
+
+.list h2
+{
+	margin: 5px;
+}

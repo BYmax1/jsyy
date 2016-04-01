@@ -1,17 +1,54 @@
 <ion-view view-title="教室">
   <ion-content class="padding">
-    <h2>Welcome to Ionic</h2>
-    <p>
-    This is the Ionic starter for tabs-based apps. For other starters and ready-made templates, check out the <a href="http://market.ionic.io/starters" target="_blank">Ionic Market</a>.
-    </p>
-    <p>
-      To edit the content of each tab, edit the corresponding template file in <code>www/templates/</code>. This template is <code>www/templates/tab-dash.html</code>
-    </p>
-    <p>
-    If you need help with your app, join the Ionic Community on the <a href="http://forum.ionicframework.com" target="_blank">Ionic Forum</a>. Make sure to <a href="http://twitter.com/ionicframework" target="_blank">follow us</a> on Twitter to get important updates and announcements for Ionic developers.
-    </p>
-    <p>
-      For help sending push notifications, join the <a href="https://apps.ionic.io/signup" target="_blank">Ionic Platform</a> and check out <a href="http://docs.ionic.io/docs/push-overview" target="_blank">Ionic Push</a>. We also have other services available.
-    </p>
+       
+          <p id="right-button">
+            <a class="button button-positive icon icon-right ion-chevron-right" href="#/tab/class-table">最新课表
+            </a>
+          </p>
+   <div id="select">
+   	空闲时间
+    <select>
+      <option selected>周一</option>
+      <option>周二</option>
+      <option>周三</option>
+      <option>周四</option>
+      <option>周五</option>
+    </select>
+    <select>
+      <option selected>1-2</option>
+      <option>1-2-3</option>
+      <option>1-2-3-4</option>
+      <option>5-6</option>
+      <option>5-6-7</option>
+      <option>8-9</option>
+      <option>8-9-A</option>
+    </select> 
+   </div>
+   <div id="select">
+   	教室容量
+    <select>
+      <option selected>40</option>
+      <option>50</option>
+    </select>
+   </div>
+   <div id="select">
+   	所装软件
+    <input type="text" placeholder="输入软件名字" style="display:inline;background-color:#eee;height:20px">
+
+   </div>                       
+ 
+       <div class="list">
+
+        <a class="item item-thumbnail-left" href="#/tab/dash/1">
+           <img src="http://www.pp3.cn/uploads/allimg/111110/114J0L31-5.jpg" width="100px" height="100px">
+           <h2>名称:H503</h2>
+           <h2>编号:503</h2>
+           <h2>容量:40</h2>         
+        </a>
+
+
+
+      </div>     
+
   </ion-content>
 </ion-view>

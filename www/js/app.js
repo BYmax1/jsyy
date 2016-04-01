@@ -67,6 +67,26 @@ $ionicConfigProvider.platform.android.views.transition('android');
     }
   })
 
+  .state('tab.classTable', {
+    url: '/class-table',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/class-table.html',
+        controller: 'DashCtrl'
+      }
+    }
+  })
+
+  .state('tab.classDetail', {
+    url: '/dash/:classId',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/class-detail.html',
+        controller: 'ClassDetailCtrl'
+      }
+    }
+  })
+
   .state('tab.chats', {
       url: '/chats',
       views: {
