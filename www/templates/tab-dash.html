@@ -1,22 +1,19 @@
 <ion-view view-title="教室">
-  <ion-content class="padding">
-       
-          <p id="right-button">
-            <a class="button button-positive icon icon-right ion-chevron-right" href="#/tab/class-table">最新课表
-            </a>
-          </p>
+  <ion-content class="padding"> 
+
    <div id="select">
    	空闲时间
-    <select>
+    <select ng-model="day">
       <option selected>周一</option>
       <option>周二</option>
       <option>周三</option>
       <option>周四</option>
       <option>周五</option>
     </select>
-    <select>
+    <select ng-model="no">
       <option selected>1-2</option>
       <option>1-2-3</option>
+      <option>3-4</option>
       <option>1-2-3-4</option>
       <option>5-6</option>
       <option>5-6-7</option>
@@ -26,29 +23,26 @@
    </div>
    <div id="select">
    	教室容量
-    <select>
-      <option selected>40</option>
+    <select  ng-model="capacity">
+      <option slected>60</option>
       <option>50</option>
     </select>
    </div>
    <div id="select">
    	所装软件
-    <input type="text" placeholder="输入软件名字" style="display:inline;background-color:#eee;height:20px">
-
-   </div>                       
- 
-       <div class="list">
-
-        <a class="item item-thumbnail-left" href="#/tab/dash/1">
-           <img src="http://www.pp3.cn/uploads/allimg/111110/114J0L31-5.jpg" width="100px" height="100px">
-           <h2>名称:H503</h2>
-           <h2>编号:503</h2>
-           <h2>容量:40</h2>         
-        </a>
-
-
-
-      </div>     
+    <input type="text" placeholder="输入软件名字"   ng-model="software" style="display:inline;background-color:#eee;height:20px">
+                 
+   <div class="list">
+    <ion-list>
+      <ion-item class="item-thumbnail-left item-icon-right" ng-repeat="class in classes  | filter:software | filter:{capacity:capacity} |dateFilter:day:no|orderBy:'roomId'" type="item-text-wrap" href="#/tab/dash/{{class.roomId}}">
+        <img ng-src="{{class.img}}"  width="100px" height="100px">
+        <h2>名称：{{class.roomName}}</h2>
+        <h2>编号：{{class.roomId}}</h2>
+        <h2>容量：{{class.capacity}}</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>       
+    </div>     
 
   </ion-content>
 </ion-view>

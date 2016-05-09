@@ -1,16 +1,32 @@
 <ion-view view-title="消息">
   <ion-content>
+   <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher> 
+<div class="card">
+  <div class="item item-divider">
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.face}}">
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.lastText}}</p>
+      <ion-item class="item-avatar item-icon-right" type="item-text-wrap" href="#/tab/chats/0">
+        <img ng-src="./img/ben.png">
+        <h2>管理员</h2>
+        
         <i class="icon ion-chevron-right icon-accessory"></i>
-
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
       </ion-item>
     </ion-list>
+  </div>
+  <div class="item item-text-wrap">
+  
+    <ion-list>
+       <li class="item" ng-repeat="item in items|shFilter|orderBy:'id'">
+        <span class="course-name">{{item.courseName}}</span>
+        <span class="status">{{item.status}}</span>
+        <span class="room-no">{{item.roomNo}}</span>
+        
+        <br style="clear:both;">
+       </li>  
+    </ion-list>          
+ 
+  </div>
+
+</div>    
+
   </ion-content>
 </ion-view>

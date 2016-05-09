@@ -1,9 +1,97 @@
-<ion-view view-title="最新课表">
+<ion-view view-title="本教室课表" class="bg">
   <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-    </ion-list>
+     
+     <div id="wrapper">
+		<div class="row">
+		  <div class="col-blank"></div>	
+		  <div class="col-day">周一</div>
+		  <div class="col-day">周二</div>
+		  <div class="col-day">周三</div>
+		  <div class="col-day">周四</div>
+		  <div class="col-day" style="border: 1px solid gray;">周五</div>
+		</div>
+		<div id="content">
+			<div class="row">
+	           <div class="col-blank"><p>1</p></div>	
+			</div>
+			<div class="row">
+	           <div class="col-blank"><p>2</p></div>	
+			</div>	
+			<div class="row">
+	           <div class="col-blank"><p>3</p></div>	
+			</div>
+			<div class="row">
+	           <div class="col-blank"><p>4</p></div>	
+			</div>
+			<div class="row">
+	           <div class="col-blank"><p>5</p></div>	
+			</div>
+			<div class="row">
+	           <div class="col-blank"><p>6</p></div>	
+			</div>
+			<div class="row">
+	           <div class="col-blank"><p>7</p></div>	
+			</div>					
+			<div class="row">
+	           <div class="col-blank"><p>8</p></div>	
+			</div>
+			<div class="row">
+	           <div class="col-blank"><p>9</p></div>	
+			</div>
+			<div class="row">
+	           <div class="col-blank"><p>10</p></div>	
+			</div>
+			<div class="ceil">
+
+			</div>
+
+				<div ng-class="{true: 'monday1-2 calm-bg', false:''}[item['周一1-2']!=null]">{{item['周一1-2']}}</div>
+				<div ng-class="{true: 'monday1-2-3 calm-bg', false:''}[item['周一1-2-3']!=null]">{{item['周一1-2-3']}}</div>
+
+				<div ng-class="{true: 'monday1-2-3-4 calm-bg', false:''}[item['周一1-2-3-4']!=null]">{{item['周一1-2-3-4']}}</div>
+				<div ng-class="{true: 'monday3-4 calm-bg', false:''}[item['周一3-4']!=null]">{{item['周一3-4']}}</div>
+				<div ng-class="{true: 'monday5-6-7 calm-bg', false:''}[item['周一5-6-7']!=null]">{{item['周一5-6-7']}}</div>
+				<div ng-class="{true: 'monday8-9 calm-bg', false:''}[item['周一8-9']!=null]">{{item['周一8-9']}}</div>
+				<div ng-class="{true: 'monday8-9-A calm-bg', false:''}[item.monday8_9_A!=null]">{{item['周一8-9-A']}}</div>
+		        <div ng-class="{true: 'tuesday1-2 calm-bg', false:''}[item['周二1-2']!=null]">{{item['周二1-2']}}</div>
+		        <div ng-class="{true: 'tuesday1-2-3 calm-bg', false:''}[item['周二1-2-3']!=null]">{{item['周二1-2-3']}}</div>
+		        <div ng-class="{true: 'tuesday1-2-3-4 calm-bg', false:''}[item['周二1-2-3-4']!=null]">{{item['周二1-2-3-4']}}</div>
+		        <div ng-class="{true: 'tuesday3-4 calm-bg', false:''}[item['周二3-4']!=null]">{{item['周二3-4']}}</div>
+		        <div ng-class="{true: 'tuesday5-6 calm-bg', false:''}[item['周二5-6']!=null]">{{item['周二5-6']}}</div>
+		        <div ng-class="{true: 'tuesday5-6-7 calm-bg', false:''}[item['周二5-6-7']!=null]">{{item['周二5-6-7']}}</div>
+		        <div ng-class="{true: 'tuesday8-9 calm-bg', false:''}[item['周二8-9']!=null]">{{item['周二8-9']}}</div>
+		        <div ng-class="{true: 'tuesday8-9-A calm-bg', false:''}[item['周二8-9-A']!=null]">{{item['周二8-9-A']}}</div>
+	            <div ng-class="{true: 'wednesday1-2 calm-bg', false:''}[item['周三1-2']!=null]">{{item['周三1-2']}}</div>
+	            <div ng-class="{true: 'wednesday1-2-3 calm-bg', false:''}[item['周三1-2-3']!=null]">{{item['周三1-2-3']}}</div>
+	            <div ng-class="{true: 'wednesday1-2-3-4 calm-bg', false:''}[item['周三1-2-3-4']!=null]">{{item['周三1-2-3-4']}}</div>
+	            <div ng-class="{true: 'wednesday3-4 calm-bg', false:''}[item['周三3-4']!=null]">{{item['周三3-4']}}</div>
+	            <div ng-class="{true: 'wednesday5-6 calm-bg', false:''}[item['周三5-6']!=null]">{{item['周三5-6']}}</div>
+	            <div ng-class="{true: 'wednesday5-6-7 calm-bg', false:''}[item['周三5-6-7']!=null]">{{item['周三5-6-7']}}</div>
+	            <div ng-class="{true: 'wednesday8-9 calm-bg', false:''}[item['周三8-9']!=null]">{{item['周三8-9']}}</div>
+	            <div ng-class="{true: 'wednesday8-9-A calm-bg', false:''}[item['周三8-9-A']!=null]">{{item['周三8-9-A']}}</div>
+	            <div ng-class="{true: 'thursday1-2 calm-bg', false:''}[item['周四1-2']!=null]">{{item['周四1-2']}}</div>
+	            <div ng-class="{true: 'thursday1-2-3 calm-bg', false:''}[item['周四1-2-3']!=null]">{{item['周四1-2-3']}}</div>
+	            <div ng-class="{true: 'thursday1-2-3-4 calm-bg', false:''}[item['周四1-2-3-4']!=null]">{{item['周四1-2-3-4']}}</div>
+	            <div ng-class="{true: 'thursday3-4 calm-bg', false:''}[item['周四3-4']!=null]">{{item['周四3-4']}}</div>
+	            <div ng-class="{true: 'thursday5-6 calm-bg', false:''}[item['周四5-6']!=null]">{{item['周四5-6']}}</div>
+	            <div ng-class="{true: 'thursday5-6-7 calm-bg', false:''}[item['周四5-6-7']!=null]">{{item['周四5-6-7']}}</div>
+	            <div ng-class="{true: 'thursday8-9 calm-bg', false:''}[item['周四8-9']!=null]">{{item['周四8-9']}}</div>
+	            <div ng-class="{true: 'thursday8-9-A calm-bg', false:''}[item['周四8-9-A']!=null]">{{item['周四8-8-A']}}</div>
+	            <div ng-class="{true: 'friday1-2 calm-bg', false:''}[item['周五1-2']!=null]">{{item['周五1-2']}}</div>
+	            <div ng-class="{true: 'friday1-2-3 calm-bg', false:''}[item['周五1-2-3']!=null]">{{item['周五1-2-3']}}</div>
+	            <div ng-class="{true: 'friday1-2-3-4 calm-bg', false:''}[item.friday['周五1-2-3-4']!=null]">{{item['周五1-2-3-4']}}</div>
+	            <div ng-class="{true: 'friday3-4 calm-bg', false:''}[item['周五3-4']!=null]">{{item['周五3-4']}}</div>
+	            <div ng-class="{true: 'friday5-6 calm-bg', false:''}[item['周五5-6']!=null]">{{item['周五5-6']}}</div>
+	            <div ng-class="{true: 'friday5-6-7 calm-bg', false:''}[item['周五5-6-7']!=null]">{{item['周五5-6-7']}}</div>
+	            <div ng-class="{true: 'friday8-9 calm-bg', false:''}[item['周五8-9']!=null]">{{item['周五8-9']}}</div>
+	            <div ng-class="{true: 'friday8-9-A calm-bg', false:''}[item['周五8-9-A']!=null]">{{item['周五8-9-A']}}</div>
+            	            
+
+
+																													
+		</div>         
+
+     </div>
+
   </ion-content>
 </ion-view>

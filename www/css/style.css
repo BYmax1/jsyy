@@ -1,5 +1,10 @@
 /* Empty. Add your own CSS if you like */
 
+body
+{
+	font-family: Microsoft YaHei;
+}
+
 
 #login
 {
@@ -29,9 +34,165 @@
 #select
 {
 	margin-bottom: 10px;
+	font-size: 16px;
 }
 
 .list h2
 {
 	margin: 5px;
+}
+.course-name
+{
+   float: left;
+}
+.room-no
+{  
+   margin-right: 20px;
+   float: right;
+}
+.status
+{
+	float: right;
+}
+
+.ion-clock
+{
+	margin-left:0px;
+}
+.item-text-wrap li
+{
+	text-align: center;
+}
+
+#left-button
+{
+	margin-top: 20px;
+}
+
+
+#class-time
+{
+	margin-left: 14px;
+	padding: 5px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.col-blank
+{
+	width: 5%;
+	border: 1px solid gray;
+	border-right: none;
+	margin: 0;
+}
+.col-day
+{
+	width: 19%;
+	border: 1px solid gray;
+	border-right: none;
+}
+
+.row
+{
+	height: 20px;
+	margin: 0;
+	padding: 0;
+}
+
+#content .row
+{
+	height: 50px;
+	margin-top: 0;
+	text-align: center;
+}
+
+#content .col-blank
+{
+	width: 5%;
+	border: 1px solid gray;
+	border-top:none; 
+	line-height: 25px;
+	overflow:hidden;
+	margin: 0;
+}
+#content p
+{
+	margin-top: 50%;
+}
+
+
+
+#message-wrapper
+{
+	position: absolute;
+	left: 0px;
+	bottom: -500px;
+	line-height: 30px;
+	width: 100%;
+
+}
+
+#message-wrapper input
+{
+	border: 2px solid #A9A9A9;
+	border-radius: 5px;
+	width: 90%;
+	font-size: 20px;
+	display: inline;
+}
+#message-wrapper p
+{
+	margin: 0px;
+	padding: 0px;
+}
+#message-wrapper span
+{
+	padding: 5px;
+	border-radius: 5px;
+	color: black;	
+	width: 100%;
+}
+.admin
+{
+	margin: 20px 0;
+	position: relative;
+	left: 80%;
+}
+.teacher
+{
+	margin: 20px 0;
+}
+
+.admin span
+{
+	background-color: red;
+
+}
+
+.teacher span
+{
+	background-color:#4682B4;
+}
+
+.ion-paper-airplane
+{
+	display: inline-block;
+	font-size: 30px;
+	color: #4682B4;
+	position: relative;
+	top: 5px;
 }

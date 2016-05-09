@@ -1,0 +1,499 @@
+.bg
+{
+	  background: url("/img/bg.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#wrapper
+{
+	position: relative;
+	width: 100%;
+}
+
+
+.monday1-2
+{
+	position: absolute;
+	left: 5%;
+	width: 19%;
+	top:20px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.monday3-4
+{
+	position: absolute;
+	left: 5%;
+	width: 19%;
+	top:120px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.monday1-2-3
+{
+	position: absolute;
+	left: 5%;
+	width: 19%;
+	top:20px;
+	height: 147px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.monday1-2-3-4
+{
+	position: absolute;
+	left: 5%;
+	width: 19%;
+	top:20px;
+	height: 196px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.monday5-6
+{
+	position: absolute;
+	left: 5%;
+	width: 19%;
+	top:220px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.monday5-6-7
+{
+	position: absolute;
+	left: 5%;
+	width: 19%;
+	top:220px;
+	height: 147px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.monday8-9
+{
+	position: absolute;
+	left: 5%;
+	width: 19%;
+	top:370px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.monday8-9-A
+{
+	position: absolute;
+	left: 5%;
+	width: 19%;
+	top:370px;
+	height: 147px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+
+.tuesday1-2
+{
+	position: absolute;
+	left: 24%;
+	width: 19%;
+	top:20px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.tuesday3-4
+{
+	position: absolute;
+	left: 24%;
+	width: 19%;
+	top:120px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.tuesday1-2-3
+{
+	position: absolute;
+	left: 24%;
+	width: 19%;
+	top:20px;
+	height: 147px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.tuesday1-2-3-4
+{
+	position: absolute;
+	left: 24%;
+	width: 19%;
+	top:20px;
+	height: 196px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.tuesday5-6
+{
+	position: absolute;
+	left: 24%;
+	width: 19%;
+	top:220px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.tuesday5-6-7
+{
+	position: absolute;
+	left: 24%;
+	width: 19%;
+	top:220px;
+	height: 147px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.tuesday8-9
+{
+	position: absolute;
+	left: 24%;
+	width: 19%;
+	top:370px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.tuesday8-9-A
+{
+	position: absolute;
+	left: 24%;
+	width: 19%;
+	top:370px;
+	height: 147px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+
+.wednesday1-2
+{
+	position: absolute;
+	left: 43%;
+	width: 19%;
+	top:20px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.wednesday3-4
+{
+	position: absolute;
+	left: 43%;
+	width: 19%;
+	top:120px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.wednesday1-2-3
+{
+	position: absolute;
+	left: 43%;
+	width: 19%;
+	top:20px;
+	height: 147px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.wednesday1-2-3-4
+{
+	position: absolute;
+	left: 43%;
+	width: 19%;
+	top:20px;
+	height: 196px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.wednesday5-6
+{
+	position: absolute;
+	left: 43%;
+	width: 19%;
+	top:220px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.wednesday5-6-7
+{
+	position: absolute;
+	left: 43%;
+	width: 19%;
+	top:220px;
+	height: 147px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.wednesday8-9
+{
+	position: absolute;
+	left: 43%;
+	width: 19%;
+	top:370px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.wednesday8-9-A
+{
+	position: absolute;
+	left: 43%;
+	width: 19%;
+	top:370px;
+	height: 147px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+
+.thursday1-2
+{
+	position: absolute;
+	left: 62%;
+	width: 19%;
+	top:20px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.thursday3-4
+{
+	position: absolute;
+	left: 62%;
+	width: 19%;
+	top:120px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.thursday1-2-3
+{
+	position: absolute;
+	left: 62%;
+	width: 19%;
+	top:20px;
+	height: 147px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.thursday1-2-3-4
+{
+	position: absolute;
+	left: 62%;
+	width: 19%;
+	top:20px;
+	height: 196px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.thursday5-6
+{
+	position: absolute;
+	left: 62%;
+	width: 19%;
+	top:220px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.thursday5-6-7
+{
+	position: absolute;
+	left: 62%;
+	width: 19%;
+	top:220px;
+	height: 147px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.thursday8-9
+{
+	position: absolute;
+	left: 62%;
+	width: 19%;
+	top:370px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.thursday8-9-A
+{
+	position: absolute;
+	left: 62%;
+	width: 19%;
+	top:370px;
+	height: 147px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+
+.friday1-2
+{
+	position: absolute;
+	left: 81%;
+	width: 19%;
+	top:20px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.friday3-4
+{
+	position: absolute;
+	left: 81%;
+	width: 19%;
+	top:120px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.friday1-2-3
+{
+	position: absolute;
+	left: 81%;
+	width: 19%;
+	top:20px;
+	height: 147px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.friday1-2-3-4
+{
+	position: absolute;
+	left: 81%;
+	width: 19%;
+	top:20px;
+	height: 196px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.friday5-6
+{
+	position: absolute;
+	left: 81%;
+	width: 19%;
+	top:220px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.friday5-6-7
+{
+	position: absolute;
+	left: 81%;
+	width: 19%;
+	top:220px;
+	height: 147px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.friday8-9
+{
+	position: absolute;
+	left: 81%;
+	width: 19%;
+	top:370px;
+	height: 98px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}
+
+.friday8-9-A
+{
+	position: absolute;
+	left: 81%;
+	width: 19%;
+	top:370px;
+	height: 147px;
+	border-radius: 5px;
+	opacity: 0.7;
+	padding: 5px;
+}

@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+var app=angular.module('starter', ['ionic', 'starter.controllers',  'starter.services','ngAnimate'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -23,7 +23,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider,$httpProvider) {
   
 $ionicConfigProvider.platform.ios.tabs.style('standard');
 $ionicConfigProvider.platform.ios.tabs.position('bottom');
@@ -35,7 +36,7 @@ $ionicConfigProvider.platform.ios.backButton.previousTitleText('').icon('ion-ios
 $ionicConfigProvider.platform.android.backButton.previousTitleText('').icon('ion-android-arrow-back');
 $ionicConfigProvider.platform.ios.views.transition('ios');
 $ionicConfigProvider.platform.android.views.transition('android'); 
-
+$httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 
 
   // Ionic uses AngularUI Router which uses the concept of states
@@ -62,21 +63,21 @@ $ionicConfigProvider.platform.android.views.transition('android');
     views: {
       'tab-dash': {
         templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+        controller: 'ClassCtrl'
       }
     }
   })
-
+  //课表的视图
   .state('tab.classTable', {
-    url: '/class-table',
+    url: '/class-table/:classId',
     views: {
       'tab-dash': {
         templateUrl: 'templates/class-table.html',
-        controller: 'DashCtrl'
+        controller: 'ClassTableCtrl'
       }
     }
   })
-
+ //教室信息的视图
   .state('tab.classDetail', {
     url: '/dash/:classId',
     views: {
@@ -120,3 +121,136 @@ $ionicConfigProvider.platform.android.views.transition('android');
   $urlRouterProvider.otherwise('/');
 
 });
+
+
+app.filter('myFilter',function($http)  
+{
+  return function(input,day,no)
+  {  
+    var output=[];
+    
+     for(var i=0;i<input.length;i++)
+     {
+      $http.post('http://localhost:3000/check',{roomNo:input[i].roomNo,day:day,no:no}).success(function(item)
+        { 
+          if(!item)
+            output.push(input[i]);
+
+        });
+     }
+
+     return output;
+  }
+})
+
+app.filter('shFilter',function($http)  
+{
+  return function(input)
+  {  
+
+    
+     for(var i=0;i<input.length;i++)
+     {
+        console.log(input.length);
+        //input[i].status="审核中";
+        input[i].createdAt=input[i].createdAt.substr(0,10);
+        switch(input[i].status)
+        {
+          case 0:input[i].status="审核";break;
+          case 1:input[i].status="成功";break;
+          case -1:input[i].status="失败";
+        }
+     }
+
+     return input;
+  }
+})
+
+app.filter('dateFilter',function()  
+{
+  return function(input,day,no)
+  {  
+     if(!day)
+     {
+      return input;
+     }
+     
+     var temp=day+no+',';
+     
+
+     var output=[];
+     for(var i=0;i<input.length;i++)
+     {   
+         var time=input[i].busyTime;
+         if(no.length==7)
+         {  
+            if(time.indexOf(day+"1-2-3"+',')!=-1||time.indexOf(day+"1-2"+',')!=-1||
+              time.indexOf(day+"3-4"+',')!=-1)
+                continue;
+         }
+         if(no.length==5)
+         {  
+            if(no=="1-2-3")
+            {
+               if(time.indexOf(day+'1-2'+',')!=-1||time.indexOf(day+'3-4'+',')!=-1
+                ||time.indexOf(day+'1-2-3-4'+',')!=-1)
+                 continue;    
+            }
+            if(no=="5-6-7")
+            {
+               if(time.indexOf(day+'5-6'+',')!=-1)
+                 continue;    
+            }
+            if(no=="8-9-A")
+            {
+               if(time.indexOf(day+'8-9'+',')!=-1)
+                 continue;    
+            }            
+       
+         } 
+         if(no.length==3)
+         {
+           if(no=="1-2")
+           {  
+              if(time.indexOf(day+"1-2-3"+',')!=-1||time.indexOf(day+'1-2-3-4'+',')!=-1)
+                continue;
+           }
+
+           if(no=="3-4")
+           {  
+              if(time.indexOf(day+"1-2-3"+',')!=-1||time.indexOf(day+'1-2-3-4'+',')!=-1)
+                continue;
+           }
+           if(no=="5-6")
+           {  
+              if(time.indexOf(day+"5-6-7"+',')!=-1)
+                continue;
+           }
+           if(no=="8-9")
+           {  
+              console.log("fuck ");
+              if(time.indexOf(day+"8-9-A"+',')!=-1)
+                continue;
+           }                                        
+         } 
+        if(input[i].busyTime.indexOf(temp)==-1)
+           output.push(input[i]);
+
+     }
+     return output;
+  }
+})
+
+app.filter('statusFilter',function($http)  
+{
+  return function(input)
+  {  
+     if(input)
+        input="管理员";
+     else
+        input="我";
+    
+   
+     return input;
+  }
+})
